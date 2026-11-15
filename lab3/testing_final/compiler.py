@@ -372,7 +372,7 @@ def my_compiler_opt(qc: QuantumCircuit) -> QuantumCircuit:
     #find the s,e,t and d matrix
     s = s_matrix(coupling_map,num_qubits_phys)
     e,t = e_t_matrices(num_qubits_phys)
-    a1,a2,a3 = 0.7,0.3,0
+    a1,a2,a3 = 0.7,0.2,0.1
     d = d_matrix(s,e,t,a1,a2,a3)
     #find the optimal mapping
     mapping = opt_mapping(initial_mapping,d,qc,100,0.001,0.99)

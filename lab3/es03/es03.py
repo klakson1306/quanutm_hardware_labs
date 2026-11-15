@@ -24,6 +24,15 @@ def get_probabilities(num_qubits, counts):
     probabilities = [counts.get(state, 0) / total_shots for state in all_states]
     return probabilities
 
+def Classical_Fidelity(prob_P, prob_Q):
+    
+    p_array = np.array(prob_P)
+    q_array = np.array(prob_Q)
+    
+    F = np.sum(np.sqrt(p_array) * np.sqrt(q_array))**2
+    
+    return float(np.clip(F, 0.0, 1.0))
+
 def Fidelity(psi, phi):
     F = np.abs(np.vdot(psi, phi))**2
     return float(np.clip(F, 0.0, 1.0))

@@ -28,6 +28,15 @@ def get_probabilities(num_clbits, counts):
     total_shots = sum(counts.values())
     return [counts.get(state, 0) / total_shots for state in all_states]
 
+def Classical_Fidelity(prob_P, prob_Q):
+
+    p_array = np.array(prob_P)
+    q_array = np.array(prob_Q)
+    
+    F = np.sum(np.sqrt(p_array) * np.sqrt(q_array))**2
+    
+    return float(np.clip(F, 0.0, 1.0))
+
 def Fidelity(psi, phi):
     F = np.abs(np.vdot(psi, phi))**2
     return float(np.clip(F, 0.0, 1.0))
@@ -71,18 +80,18 @@ for name, path in files.items():
 
     #  qiskit compiler
     qc_qiskit = transpile(qc_m, backend=backend_fake, optimization_level=0, seed_transpiler=42)
-    prob_qiskit = get_probabilities(num_clbits, backend_fake.run(qc_qiskit).result().get_counts())
-    fid_qiskit = Fidelity(prob_basic, prob_qiskit)
+    prob_qiskit = get_probabilities(num_clbits, backend_fake.run(qc_qiskit,shots=2012).result().get_counts())
+    fid_qiskit = Classical_Fidelity(prob_basic, prob_qiskit)
 
     # custom basic compiler
     qc_basic = my_compiler_basic(qc)
-    prob_basic_fake = get_probabilities(num_clbits, backend_fake.run(qc_basic).result().get_counts())
-    fid_basic = Fidelity(prob_basic, prob_basic_fake)
+    prob_basic_fake = get_probabilities(num_clbits, backend_fake.run(qc_basic, shots=2012).result().get_counts())
+    fid_basic = Classical_Fidelity(prob_basic, prob_basic_fake)
 
     # custom optimized compiler
     qc_opt = my_compiler_opt(qc)
-    prob_opt_fake = get_probabilities(num_clbits, backend_fake.run(qc_opt).result().get_counts())
-    fid_opt = Fidelity(prob_basic, prob_opt_fake)
+    prob_opt_fake = get_probabilities(num_clbits, backend_fake.run(qc_opt,shots=2012).result().get_counts())
+    fid_opt = Classical_Fidelity(prob_basic, prob_opt_fake)
 
     print_circuit_comparison(name, qc, qc_qiskit, qc_basic, qc_opt, fid_qiskit, fid_basic, fid_opt)
 
