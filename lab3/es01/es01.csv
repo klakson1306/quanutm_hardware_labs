@@ -1,0 +1,41 @@
+circuit,backend,optimization,depth,gates counts,total gates,fidelity_sv
+adder_small,basis gates,0,13,"[('cx', 10), ('rz', 9), ('rx', 4), ('ry', 2)]",25,0.9999999999999973
+adder_small,fake guadalupe,0,20,"[('cx', 16), ('rz', 13), ('measure', 4), ('x', 2), ('sx', 2), ('barrier', 1)]",37,0.6134071350097651
+adder_small,basis gates,1,13,"[('cx', 10), ('rz', 9), ('rx', 4), ('ry', 2)]",25,0.9999999999999973
+adder_small,fake guadalupe,1,20,"[('cx', 16), ('rz', 13), ('measure', 4), ('sx', 2), ('x', 2), ('barrier', 1)]",37,0.6761207580566401
+adder_small,basis gates,2,13,"[('cx', 10), ('rz', 9), ('rx', 4), ('ry', 2)]",25,0.9999999999999973
+adder_small,fake guadalupe,2,19,"[('cx', 16), ('rz', 12), ('measure', 4), ('sx', 2), ('x', 2), ('barrier', 1)]",36,0.7168664932250971
+adder_small,basis gates,3,13,"[('cx', 10), ('rz', 9), ('rx', 4), ('ry', 2)]",25,0.9999999999999973
+adder_small,fake guadalupe,3,19,"[('cx', 16), ('rz', 12), ('measure', 4), ('x', 2), ('sx', 2), ('barrier', 1)]",36,0.6809473037719721
+adder_medium,basis gates,0,111,"[('cx', 65), ('rz', 56), ('rx', 21), ('ry', 16)]",158,0.9999999999999982
+adder_medium,fake guadalupe,0,226,"[('cx', 200), ('rz', 88), ('sx', 16), ('measure', 10), ('x', 5), ('barrier', 1)]",319,0.006890296936035145
+adder_medium,basis gates,1,107,"[('cx', 65), ('rz', 56), ('ry', 16), ('rx', 13)]",150,0.9999999999999964
+adder_medium,fake guadalupe,1,183,"[('cx', 116), ('rz', 80), ('sx', 16), ('measure', 10), ('x', 5), ('barrier', 1)]",227,0.04657840728759749
+adder_medium,basis gates,2,107,"[('cx', 65), ('rz', 52), ('ry', 16), ('rx', 13)]",146,0.9999999999999973
+adder_medium,fake guadalupe,2,189,"[('rz', 105), ('cx', 100), ('sx', 48), ('measure', 10), ('x', 7), ('barrier', 1)]",270,0.07003879547119123
+adder_medium,basis gates,3,107,"[('cx', 65), ('rz', 52), ('ry', 16), ('rx', 13)]",146,0.9999999999999973
+adder_medium,fake guadalupe,3,189,"[('rz', 105), ('cx', 100), ('sx', 48), ('measure', 10), ('x', 7), ('barrier', 1)]",270,0.0780067443847654
+alu-bdd_288,basis gates,0,56,"[('cx', 38), ('rz', 35), ('rx', 11), ('ry', 10)]",94,0.9999999999999911
+alu-bdd_288,fake guadalupe,0,160,"[('cx', 137), ('rz', 55), ('measure', 16), ('sx', 10), ('x', 1), ('barrier', 1)]",219,0.0753030776977537
+alu-bdd_288,basis gates,1,48,"[('cx', 38), ('rz', 35), ('ry', 6), ('rx', 2)]",81,0.9999999999999929
+alu-bdd_288,fake guadalupe,1,114,"[('cx', 89), ('rz', 44), ('measure', 16), ('sx', 6), ('barrier', 1)]",155,0.2215614318847654
+alu-bdd_288,basis gates,2,48,"[('cx', 38), ('rz', 35), ('ry', 6), ('rx', 2)]",81,0.9999999999999929
+alu-bdd_288,fake guadalupe,2,106,"[('cx', 73), ('rz', 56), ('measure', 16), ('sx', 15), ('x', 2), ('barrier', 1)]",162,0.2668771743774412
+alu-bdd_288,basis gates,3,48,"[('cx', 38), ('rz', 35), ('ry', 6), ('rx', 2)]",81,0.9999999999999929
+alu-bdd_288,fake guadalupe,3,106,"[('cx', 73), ('rz', 56), ('measure', 16), ('sx', 15), ('x', 2), ('barrier', 1)]",162,0.24128818511962868
+linearsolver,basis gates,0,23,"[('rx', 17), ('ry', 12), ('rz', 6), ('cx', 4)]",39,0.5216007566700569
+linearsolver,fake guadalupe,0,29,"[('rz', 30), ('sx', 16), ('cx', 4), ('measure', 3), ('x', 1), ('barrier', 1)]",54,0.44896012383713935
+linearsolver,basis gates,1,13,"[('ry', 7), ('rx', 4), ('cx', 4), ('rz', 1)]",16,0.5216007566700569
+linearsolver,fake guadalupe,1,21,"[('rz', 13), ('sx', 9), ('cx', 4), ('measure', 3), ('barrier', 1)]",29,0.45637893865774964
+linearsolver,basis gates,2,15,"[('rx', 8), ('rz', 6), ('cx', 4), ('ry', 2)]",20,0.5216007566700569
+linearsolver,fake guadalupe,2,14,"[('rz', 9), ('sx', 4), ('cx', 4), ('measure', 3), ('x', 2), ('barrier', 1)]",22,0.481165870080697
+linearsolver,basis gates,3,15,"[('rx', 8), ('rz', 6), ('cx', 4), ('ry', 2)]",20,0.5216007566700569
+linearsolver,fake guadalupe,3,14,"[('rz', 9), ('sx', 4), ('cx', 4), ('measure', 3), ('x', 2), ('barrier', 1)]",22,0.45576773292786227
+phaseest,basis gates,0,82,"[('rz', 42), ('cx', 42), ('ry', 8), ('rx', 8)]",100,0.07910156249999928
+phaseest,fake guadalupe,0,108,"[('cx', 66), ('rz', 58), ('sx', 8), ('measure', 5), ('barrier', 1)]",137,0.02213900045235376
+phaseest,basis gates,1,82,"[('rz', 42), ('cx', 42), ('ry', 8), ('rx', 8)]",100,0.07910156249999928
+phaseest,fake guadalupe,1,104,"[('rz', 58), ('cx', 57), ('sx', 8), ('measure', 5), ('barrier', 1)]",128,0.03329152349181188
+phaseest,basis gates,2,37,"[('rz', 20), ('cx', 14), ('rx', 10), ('ry', 10)]",54,0.07910156249999953
+phaseest,fake guadalupe,2,53,"[('rz', 36), ('cx', 26), ('sx', 14), ('measure', 5), ('x', 4), ('barrier', 1)]",85,0.05592446396041201
+phaseest,basis gates,3,37,"[('rz', 20), ('cx', 14), ('rx', 10), ('ry', 10)]",54,0.07910156249999953
+phaseest,fake guadalupe,3,53,"[('rz', 36), ('cx', 26), ('sx', 14), ('measure', 5), ('x', 4), ('barrier', 1)]",85,0.05537327292206589

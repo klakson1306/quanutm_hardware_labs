@@ -1,0 +1,6 @@
+Circuit	Qiskit Depth	My Depth	Qiskit CX	My CX	Qiskit Gates	My Gates	Qiskit Fid	My Fid
+adder_small	20	35	16	28	cx: 16, rz: 13, sx: 2, x: 2	cx: 28, rz: 13, sx: 2, x: 2	0.569848	0.435806
+adder_medium	226	270	200	299	cx: 200, rz: 88, sx: 16, x: 5	cx: 299, rz: 88, sx: 16, x: 5	0.008072	0.000596
+alu-bdd_288	160	169	137	173	cx: 137, rz: 55, sx: 10, x: 1	cx: 173, rz: 55, sx: 10, x: 1	0.076379	0.05402
+linearsolver	29	33	4	4	cx: 4, rz: 30, sx: 16, x: 1	cx: 4, rz: 34, sx: 16, x: 1	0.42028	0.426401
+phaseest	108	114	66	84	cx: 66, rz: 58, sx: 8	cx: 84, rz: 58, sx: 8	0.024123	0.021555
