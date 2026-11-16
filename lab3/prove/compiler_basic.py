@@ -181,6 +181,6 @@ def my_compiler_basic(qc: QuantumCircuit) -> QuantumCircuit:
 
 
     for idx in range(num_qubits_log):
-         qc_compiled.measure(mapping[idx],idx)
+        qc_compiled.measure(mapping[idx],idx)
 
     return qc_compiled

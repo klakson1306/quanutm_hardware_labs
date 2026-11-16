@@ -378,7 +378,7 @@ def my_compiler_opt(qc: QuantumCircuit) -> QuantumCircuit:
     mapping = opt_mapping(initial_mapping,d,qc,100,0.001,0.99)
     print(f'Optimized mapping: {mapping}\nParameters for D matrix: a1 = {a1}, a2 = {a2}, a3 = {a3}')
 
-    #here the routing part,
+    #here the routing part
     qc_routed = HA_routing(mapping,qc,d)
     qc_compiled = translate_to_native(qc_routed)
 
