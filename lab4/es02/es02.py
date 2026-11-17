@@ -40,5 +40,5 @@ for edge in edges:
     for c in range(num_colors):
         model += variables[i][c]*variables[j][c]
 
-solution = anneal_qubo(model)
-print(solution)
+solution = anneal_qubo(model,num_anneals=100)
+print(solution.best)

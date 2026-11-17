@@ -35,6 +35,6 @@ for i in range(num_nodes):
         if w[i][j] != 0:
             model += w[i][j]*(2*nodes[i]*nodes[j] - nodes[i] - nodes[j])
 
-solution = anneal_qubo(model)
-print(solution)
+solution = anneal_qubo(model,num_anneals=100)
+print(solution.best)
 
