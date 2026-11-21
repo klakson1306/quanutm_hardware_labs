@@ -42,3 +42,4 @@ for edge in edges:
 
 solution = anneal_qubo(model,num_anneals=100)
 print(solution.best)
+print(model.is_solution_valid(solution))
