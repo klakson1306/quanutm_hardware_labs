@@ -36,10 +36,10 @@ def create_expr(clause: list,variables: list,y: boolean_var):
 
 variables = []
 for i in range(num_var):
-    variables.append(boolean_var(name=f'x_{i}'))
+    variables.append(boolean_var(name=f'x_{i+1}'))
 s_variables = []
 for j in range(num_clauses):
-    s_variables.append(boolean_var(name=f'y_{j}'))
+    s_variables.append(boolean_var(name=f'y_{j+1}'))
 
 f = QUBO()
 for i,clause in enumerate(clauses):
@@ -54,7 +54,7 @@ num_satisfied = 0
 for clause in clauses:
     sat = False
     for var in clause:
-        val = solution[f'x_{abs(var)-1}']
+        val = solution[f'x_{abs(var)}']
         if (val == 1 and var > 0) or (val == 0 and var < 0):
             sat = True
     if sat:
