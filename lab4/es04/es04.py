@@ -50,4 +50,4 @@ score = -cost_f.value(solution)
 print(f'Penalty guests: {p_guests}\nPenaly tables: {p_table}\nScore cost function: {score}')
 for k in range(num_tables):
     seated = [df.columns[i] for i in range(num_guests) if solution[f'x_{k}_{df.columns[i]}'] == 1]
-    print(f"Tavolo {k} ({len(seated)}): {seated}")
+    print(f"Table {k} ({len(seated)}): {seated}")

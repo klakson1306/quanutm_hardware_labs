@@ -52,8 +52,10 @@ weight = weight**2
 
 #we need to calculate the costraint, we need the average value of the cost function
 p = sum(stats[:,0])
-print(p)
+print(f'Coefficient for the penalty function: {p}')
 model = QUBO()
 model+= preference + p*weight
-solution = anneal_qubo(model,num_anneals=100)
-print(solution.best)
+solution = anneal_qubo(model,num_anneals=100).best.state
+p_weight = weight.value(solution)
+score = -preference.value(solution)
+print(f'Penalty weight: {p_weight}\nScore cost function: {score}')
