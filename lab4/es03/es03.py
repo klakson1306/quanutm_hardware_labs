@@ -50,8 +50,8 @@ for j in range(num_s):
     weight+=(2**j)*slack[j]
 weight = weight**2
 
-#we need to calculate the costraint, we need the average value of the cost function
-p = sum(stats[:,0])
+#we need to calculate the costraint, we need the average value of the cost function, and choose a value between 0.75*mean(f) < p < 1.25*mean(f)
+p = (sum(stats[:,0]) // 2)*1.10
 print(f'Coefficient for the penalty function: {p}')
 model = QUBO()
 model+= preference + p*weight
